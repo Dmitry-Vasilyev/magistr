@@ -1,0 +1,45 @@
+unit Data;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, Vcl.Menus;
+
+type
+  TDataModule2 = class(TDataModule)
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    ADOTable2: TADOTable;
+    DataSource2: TDataSource;
+    ADOTable1id: TAutoIncField;
+    ADOTable1name: TStringField;
+    ADOTable1surname: TStringField;
+    ADOTable1fathername: TStringField;
+    ADOTable1birthdate: TStringField;
+    ADOTable1birthplace: TStringField;
+    ADOTable1nationality: TStringField;
+    ADOTable1city: TStringField;
+    ADOTable1district: TStringField;
+    ADOTable1street: TStringField;
+    ADOTable1districtIndex: TIntegerField;
+    ADOTable1tel: TIntegerField;
+    ADOTable1photo: TStringField;
+    ADOTable1academicstepen_academicstepenid: TIntegerField;
+    ADOTable1Stepen: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule2: TDataModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

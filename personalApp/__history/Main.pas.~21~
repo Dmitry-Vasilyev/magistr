@@ -1,0 +1,130 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls, JPEG, Vcl.Menus,
+  Vcl.Buttons;
+
+type
+  TForm1 = class(TForm)
+    DBNavigator1: TDBNavigator;
+    Button1: TButton;
+    DBGrid1: TDBGrid;
+    MainMenu1: TMainMenu;
+    File1: TMenuItem;
+    New1: TMenuItem;
+    Open1: TMenuItem;
+    Save1: TMenuItem;
+    SaveAs1: TMenuItem;
+    N2: TMenuItem;
+    Print1: TMenuItem;
+    PrintSetup1: TMenuItem;
+    N1: TMenuItem;
+    Exit1: TMenuItem;
+    Edit1: TMenuItem;
+    Undo1: TMenuItem;
+    Repeat1: TMenuItem;
+    Cut1: TMenuItem;
+    Copy1: TMenuItem;
+    Paste1: TMenuItem;
+    PasteSpecial1: TMenuItem;
+    Find1: TMenuItem;
+    Replace1: TMenuItem;
+    GoTo1: TMenuItem;
+    Links1: TMenuItem;
+    Object1: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    Label1: TLabel;
+    ComboBox1: TComboBox;
+    Edit2: TEdit;
+    Button2: TButton;
+    ComboBox2: TComboBox;
+    Edit3: TEdit;
+    Button3: TButton;
+    Label2: TLabel;
+    Button4: TButton;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    BitBtn1: TBitBtn;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure N7Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses Data, Edit, UnitSprav;
+
+
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+begin
+   //DataModule2.MainTable.IndexName:='.....';
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Form4.ShowModal();
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+if not Data.DataModule2.MainTable.Locate(Combobox1.Text, Edit2.Text, [loCaseInsensitive,
+    loPartialKey]) then
+    ShowMessage('Запись не найдена');
+
+end;
+
+
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+    if Length(Edit3.Text) > 0 then
+      begin
+      Data.DataModule2.MainTable.Filtered:=false;
+      Data.DataModule2.MainTable.Filter:=Combobox2.Text + ' LIKE ' + QuotedStr(Edit3.Text+ '%');
+      Data.DataModule2.MainTable.Filtered:=true;
+      Button4.Enabled:=true;
+      end
+    else Data.DataModule2.MainTable.Filtered:=false;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+    Data.DataModule2.MainTable.Filtered:=false;
+    Button4.Enabled:=false;
+end;
+
+procedure TForm1.FormPaint(Sender: TObject);
+begin
+    Data.DataModule2.ADOConnection1.Connected:=true;
+
+      DataModule2.MainTable.Active:=True;
+      DataModule2.ADOTable2.Active:=True;
+      DataModule2.ADOTable3.Active:=True;
+end;
+
+procedure TForm1.N7Click(Sender: TObject);
+begin
+ Form2.Show;
+end;
+
+end.

@@ -1,0 +1,121 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 531
+  Width = 881
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=shadow1988;Persist Security Info=Tru' +
+      'e;User ID=root;Extended Properties="DRIVER={MySQL ODBC 5.3 ANSI ' +
+      'Driver};UID=root;PWD=shadow1988;SERVER=localhost;DATABASE=dbpers' +
+      'onal;PORT=3306;COLUMN_SIZE_S32=1;";Initial Catalog=dbpersonal'
+    LoginPrompt = False
+    Left = 24
+    Top = 192
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'personal'
+    Left = 112
+    Top = 192
+    object ADOTable1id: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object ADOTable1name: TStringField
+      FieldName = 'name'
+      Size = 45
+    end
+    object ADOTable1surname: TStringField
+      FieldName = 'surname'
+      Size = 45
+    end
+    object ADOTable1fathername: TStringField
+      FieldName = 'fathername'
+      Size = 45
+    end
+    object ADOTable1birthdate: TStringField
+      FieldName = 'birthdate'
+      Size = 45
+    end
+    object ADOTable1birthplace: TStringField
+      FieldName = 'birthplace'
+      Size = 45
+    end
+    object ADOTable1nationality: TStringField
+      FieldName = 'nationality'
+      Size = 45
+    end
+    object ADOTable1city: TStringField
+      FieldName = 'city'
+      Size = 45
+    end
+    object ADOTable1district: TStringField
+      FieldName = 'district'
+      Size = 45
+    end
+    object ADOTable1street: TStringField
+      FieldName = 'street'
+      Size = 45
+    end
+    object ADOTable1districtIndex: TIntegerField
+      FieldName = 'districtIndex'
+    end
+    object ADOTable1tel: TIntegerField
+      FieldName = 'tel'
+    end
+    object ADOTable1photo: TStringField
+      FieldName = 'photo'
+      Size = 200
+    end
+    object ADOTable1academicstepen_academicstepenid: TIntegerField
+      FieldName = 'academicstepen_academicstepenid'
+      Visible = False
+    end
+    object ADOTable1Stepen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Stepen'
+      LookupDataSet = ADOTable2
+      LookupKeyFields = 'academicstepenid'
+      LookupResultField = 'academicstepen'
+      KeyFields = 'academicstepen_academicstepenid'
+      Lookup = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 168
+    Top = 192
+  end
+  object ADOTable2: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'academicstepen'
+    Left = 112
+    Top = 240
+  end
+  object DataSource2: TDataSource
+    DataSet = ADOTable2
+    Left = 168
+    Top = 240
+  end
+  object ADOTable3: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = DataSource1
+    TableName = 'previouswork'
+    Left = 112
+    Top = 296
+  end
+  object DataSource3: TDataSource
+    DataSet = ADOTable3
+    Left = 168
+    Top = 296
+  end
+end

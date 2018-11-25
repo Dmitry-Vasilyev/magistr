@@ -1,0 +1,20 @@
+program magistr;
+
+uses
+  Vcl.Forms,
+  MainForm in 'MainForm.pas' {Form1},
+  Data in 'Data.pas' {DataM: TDataModule},
+  ListForm in 'ListForm.pas' {Form2},
+  EditForm in 'EditForm.pas' {Form3};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDataM, DataM);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.Run;
+end.

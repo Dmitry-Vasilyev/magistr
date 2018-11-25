@@ -1,0 +1,76 @@
+object DataM: TDataM
+  OldCreateOrder = False
+  Height = 440
+  Width = 552
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=root;Persist Security Info=True;User' +
+      ' ID=root;Extended Properties="Driver=MySQL ODBC 5.3 ANSI Driver;' +
+      'SERVER=localhost;UID=root;PWD=root;DATABASE=strbd;PORT=3306;COLU' +
+      'MN_SIZE_S32=1"'
+    LoginPrompt = False
+    Left = 32
+    Top = 80
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'polis'
+    Left = 128
+    Top = 72
+    object ADOTable1idpolis: TAutoIncField
+      DisplayWidth = 12
+      FieldName = 'idpolis'
+      ReadOnly = True
+    end
+    object ADOTable1num: TIntegerField
+      DisplayLabel = #1085#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
+      DisplayWidth = 12
+      FieldName = 'num'
+    end
+    object ADOTable1date: TStringField
+      DisplayWidth = 21
+      FieldName = 'date'
+      Size = 45
+    end
+    object ADOTable1person_idperson: TIntegerField
+      DisplayWidth = 16
+      FieldName = 'person_idperson'
+    end
+    object ADOTable1person_name: TStringField
+      DisplayWidth = 13
+      FieldKind = fkLookup
+      FieldName = 'person_name'
+      LookupDataSet = ADOTable2
+      LookupKeyFields = 'idperson'
+      LookupResultField = 'firstname'
+      KeyFields = 'person_idperson'
+      Lookup = True
+    end
+    object ADOTable1person_lastname: TStringField
+      DisplayWidth = 24
+      FieldKind = fkLookup
+      FieldName = 'person_lastname'
+      LookupDataSet = ADOTable2
+      LookupKeyFields = 'idperson'
+      LookupResultField = 'lastname'
+      KeyFields = 'person_idperson'
+      Lookup = True
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 208
+    Top = 72
+  end
+  object ADOTable2: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'person'
+    Left = 128
+    Top = 128
+  end
+end

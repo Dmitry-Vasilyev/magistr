@@ -1,0 +1,85 @@
+object DataM: TDataM
+  OldCreateOrder = False
+  Height = 588
+  Width = 801
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=root;Persist Security Info=True;User' +
+      ' ID=root;Extended Properties="Driver=MySQL ODBC 5.3 ANSI Driver;' +
+      'SERVER=localhost;UID=root;PWD=root;DATABASE=strbd;PORT=3306;COLU' +
+      'MN_SIZE_S32=1"'
+    LoginPrompt = False
+    Left = 24
+    Top = 24
+  end
+  object polois_person: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'polis'
+    Left = 128
+    Top = 24
+    object polois_personnum: TIntegerField
+      DisplayLabel = #1085#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
+      DisplayWidth = 12
+      FieldName = 'num'
+    end
+    object polois_personperson_idperson: TIntegerField
+      DisplayWidth = 16
+      FieldName = 'person_idperson'
+    end
+    object polois_personperson_name: TStringField
+      DisplayWidth = 13
+      FieldKind = fkLookup
+      FieldName = 'person_name'
+      LookupDataSet = person
+      LookupKeyFields = 'idperson'
+      LookupResultField = 'firstname'
+      KeyFields = 'person_idperson'
+      Lookup = True
+    end
+    object polois_personperson_lastname: TStringField
+      DisplayWidth = 24
+      FieldKind = fkLookup
+      FieldName = 'person_lastname'
+      LookupDataSet = person
+      LookupKeyFields = 'idperson'
+      LookupResultField = 'lastname'
+      KeyFields = 'person_idperson'
+      Lookup = True
+    end
+    object polois_personvipisan: TStringField
+      FieldName = 'vipisan'
+      Size = 45
+    end
+    object polois_personpolis_type_type: TStringField
+      FieldName = 'polis_type_type'
+      Size = 45
+    end
+    object polois_personkasko_idkasko: TIntegerField
+      FieldName = 'kasko_idkasko'
+    end
+    object polois_personstart: TStringField
+      FieldName = 'start'
+      Size = 45
+    end
+    object polois_personend: TStringField
+      FieldName = 'end'
+      Size = 45
+    end
+  end
+  object polis_person: TDataSource
+    DataSet = polois_person
+    Left = 192
+    Top = 24
+  end
+  object person: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'person'
+    Left = 128
+    Top = 80
+  end
+end

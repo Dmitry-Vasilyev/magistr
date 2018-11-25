@@ -1,0 +1,35 @@
+unit Data;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB;
+
+type
+  TDataM = class(TDataModule)
+    ADOConnection1: TADOConnection;
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    ADOTable1idpolis: TAutoIncField;
+    ADOTable1num: TIntegerField;
+    ADOTable1date: TStringField;
+    ADOTable2: TADOTable;
+    ADOTable1person_idperson: TIntegerField;
+    ADOTable1person_name: TStringField;
+    ADOTable1person_lastname: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataM: TDataM;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,19 @@
+program Diplom;
+
+uses
+  Vcl.Forms,
+  Main in 'Main.pas' {Form1},
+  Data in 'Data.pas' {DataModule2: TDataModule},
+  Unit3 in 'Unit3.pas',
+  Edit in 'Edit.pas' {Form4};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDataModule2, DataModule2);
+  Application.CreateForm(TForm4, Form4);
+  Application.Run;
+end.

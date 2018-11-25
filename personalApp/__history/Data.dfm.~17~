@@ -1,0 +1,363 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 531
+  Width = 881
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=shadow1988;Persist Security Info=Tru' +
+      'e;User ID=root;Extended Properties="DRIVER={MySQL ODBC 5.3 ANSI ' +
+      'Driver};UID=root;PWD=shadow1988;SERVER=localhost;DATABASE=dbpers' +
+      'onal;PORT=3306;COLUMN_SIZE_S32=1;";Initial Catalog=dbpersonal'
+    LoginPrompt = False
+    Left = 24
+    Top = 80
+  end
+  object MainTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'personal'
+    Left = 104
+    Top = 80
+    object MainTableid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object MainTablename: TStringField
+      FieldName = 'name'
+      Size = 45
+    end
+    object MainTablesurname: TStringField
+      FieldName = 'surname'
+      Size = 45
+    end
+    object MainTablefathername: TStringField
+      FieldName = 'fathername'
+      Size = 45
+    end
+    object MainTablebirthdate: TStringField
+      FieldName = 'birthdate'
+      Size = 45
+    end
+    object MainTablebirthplace: TStringField
+      FieldName = 'birthplace'
+      Size = 45
+    end
+    object MainTablenationality: TStringField
+      FieldName = 'nationality'
+      Size = 45
+    end
+    object MainTablecity: TStringField
+      FieldName = 'city'
+      Size = 45
+    end
+    object MainTabledistrict: TStringField
+      FieldName = 'district'
+      Size = 45
+    end
+    object MainTablestreet: TStringField
+      FieldName = 'street'
+      Size = 45
+    end
+    object MainTabledistrictIndex: TIntegerField
+      FieldName = 'districtIndex'
+    end
+    object MainTabletel: TIntegerField
+      FieldName = 'tel'
+    end
+    object MainTablephoto: TStringField
+      FieldName = 'photo'
+      Size = 200
+    end
+    object MainTableacademicstepen_academicstepenid: TIntegerField
+      FieldName = 'academicstepen_academicstepenid'
+      Visible = False
+    end
+    object MainTableStepen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Stepen'
+      LookupDataSet = StepenTable
+      LookupKeyFields = 'academicstepenid'
+      LookupResultField = 'academicstepen'
+      KeyFields = 'academicstepen_academicstepenid'
+      Lookup = True
+    end
+    object MainTablefaculty_idfaculty2: TIntegerField
+      FieldName = 'faculty_idfaculty'
+    end
+    object MainTableFaculty: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Faculty'
+      LookupDataSet = FacultyTable
+      LookupKeyFields = 'idfaculty'
+      LookupResultField = 'facultyname'
+      KeyFields = 'faculty_idfaculty'
+      Size = 45
+      Lookup = True
+    end
+    object MainTableacademicposition_idacademicposition: TIntegerField
+      FieldName = 'academicposition_idacademicposition'
+    end
+    object MainTableAcademicposition: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Academicposition'
+      LookupDataSet = AcademicpositionTable
+      LookupKeyFields = 'idacademicposition'
+      LookupResultField = 'academicpositionname'
+      KeyFields = 'academicposition_idacademicposition'
+      Size = 45
+      Lookup = True
+    end
+    object MainTableadministrativeposition_idadministrativeposition: TIntegerField
+      FieldName = 'administrativeposition_idadministrativeposition'
+    end
+    object MainTableAdmenistrativeposition: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Admenistrativeposition'
+      LookupDataSet = AdministrativepositionTable
+      LookupKeyFields = 'idadministrativeposition'
+      LookupResultField = 'administrativepositionname'
+      KeyFields = 'administrativeposition_idadministrativeposition'
+      Size = 45
+      Lookup = True
+    end
+    object MainTableeducation_ideducation: TIntegerField
+      FieldName = 'education_ideducation'
+    end
+    object MainTableEducation: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Education'
+      LookupDataSet = EducationTable
+      LookupKeyFields = 'ideducation'
+      LookupResultField = 'educationname'
+      KeyFields = 'education_ideducation'
+      Size = 45
+      Lookup = True
+    end
+    object MainTablefamilystatus_idfamilystatus: TIntegerField
+      FieldName = 'familystatus_idfamilystatus'
+    end
+    object MainTableFamilyStatus: TStringField
+      FieldKind = fkLookup
+      FieldName = 'FamilyStatus'
+      LookupDataSet = FamilystatusTable
+      LookupKeyFields = 'idfamilystatus'
+      LookupResultField = 'familystatusname'
+      KeyFields = 'familystatus_idfamilystatus'
+      Size = 45
+      Lookup = True
+    end
+  end
+  object MainSource: TDataSource
+    DataSet = MainTable
+    Left = 160
+    Top = 80
+  end
+  object StepenTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'academicstepen'
+    Left = 272
+    Top = 88
+  end
+  object StepenSource: TDataSource
+    DataSet = StepenTable
+    Left = 344
+    Top = 88
+  end
+  object PreviousworkTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'previouswork'
+    Left = 520
+    Top = 440
+  end
+  object PreviousworkSource: TDataSource
+    DataSet = PreviousworkTable
+    Left = 616
+    Top = 440
+  end
+  object FacultyTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'faculty'
+    Left = 272
+    Top = 144
+  end
+  object FacultySource: TDataSource
+    DataSet = FacultyTable
+    Left = 344
+    Top = 144
+  end
+  object AcademicpositionTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'academicposition'
+    Left = 272
+    Top = 200
+  end
+  object AcademicpositionSource: TDataSource
+    DataSet = AcademicpositionTable
+    Left = 344
+    Top = 200
+  end
+  object AdministrativepositionTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'administrativeposition'
+    Left = 272
+    Top = 248
+  end
+  object AdministrativepositionSource: TDataSource
+    DataSet = AdministrativepositionTable
+    Left = 344
+    Top = 248
+  end
+  object EducationTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'education'
+    Left = 272
+    Top = 296
+  end
+  object EducationSource: TDataSource
+    DataSet = EducationTable
+    Left = 344
+    Top = 296
+  end
+  object EducationinstituteTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'educationinstitute'
+    Left = 520
+    Top = 88
+  end
+  object EducationinstituteSource: TDataSource
+    DataSet = EducationinstituteTable
+    Left = 616
+    Top = 88
+  end
+  object LanguageTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'language'
+    Left = 520
+    Top = 136
+  end
+  object LanguageSource: TDataSource
+    DataSet = LanguageTable
+    Left = 616
+    Top = 136
+  end
+  object ScientificworksTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'scientificworks'
+    Left = 520
+    Top = 192
+  end
+  object ScientificworksSource: TDataSource
+    DataSet = ScientificworksTable
+    Left = 616
+    Top = 192
+  end
+  object TravelsTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'travels'
+    Left = 520
+    Top = 240
+  end
+  object TravelsSource: TDataSource
+    DataSet = TravelsTable
+    Left = 616
+    Top = 240
+  end
+  object AwardsTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'awards'
+    Left = 520
+    Top = 288
+  end
+  object AwardsSource: TDataSource
+    DataSet = AwardsTable
+    Left = 616
+    Top = 288
+  end
+  object FamilyTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'family'
+    Left = 520
+    Top = 336
+  end
+  object FamilySource: TDataSource
+    DataSet = FamilyTable
+    Left = 616
+    Top = 336
+  end
+  object MilitaryTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'military'
+    Left = 520
+    Top = 384
+  end
+  object MilitarySource: TDataSource
+    DataSet = MilitaryTable
+    Left = 616
+    Top = 384
+  end
+  object FamilystatusTable: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'familystatus'
+    Left = 272
+    Top = 344
+  end
+  object FamilystatusSource: TDataSource
+    DataSet = FamilystatusTable
+    Left = 344
+    Top = 344
+  end
+end

@@ -1,0 +1,38 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls, JPEG;
+
+type
+  TForm1 = class(TForm)
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit2, Unit4;
+
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Form4.ShowModal();
+end;
+
+end.

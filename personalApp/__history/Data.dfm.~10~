@@ -1,0 +1,118 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 531
+  Width = 881
+  object ADOConnection1: TADOConnection
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=shadow1988;Persist Security Info=Tru' +
+      'e;User ID=root;Extended Properties="DRIVER={MySQL ODBC 5.3 ANSI ' +
+      'Driver};UID=root;PWD=shadow1988;SERVER=localhost;DATABASE=dbpers' +
+      'onal;PORT=3306;COLUMN_SIZE_S32=1;";Initial Catalog=dbpersonal'
+    LoginPrompt = False
+    Provider = 'MSDASQL.1'
+    Left = 32
+    Top = 208
+  end
+  object MainTable: TADOTable
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'personal'
+    Left = 112
+    Top = 200
+    object MainTableid: TAutoIncField
+      FieldName = 'id'
+      ReadOnly = True
+    end
+    object MainTablename: TStringField
+      FieldName = 'name'
+      Size = 45
+    end
+    object MainTablesurname: TStringField
+      FieldName = 'surname'
+      Size = 45
+    end
+    object MainTablefathername: TStringField
+      FieldName = 'fathername'
+      Size = 45
+    end
+    object MainTablebirthdate: TStringField
+      FieldName = 'birthdate'
+      Size = 45
+    end
+    object MainTablebirthplace: TStringField
+      FieldName = 'birthplace'
+      Size = 45
+    end
+    object MainTablenationality: TStringField
+      FieldName = 'nationality'
+      Size = 45
+    end
+    object MainTablecity: TStringField
+      FieldName = 'city'
+      Size = 45
+    end
+    object MainTabledistrict: TStringField
+      FieldName = 'district'
+      Size = 45
+    end
+    object MainTablestreet: TStringField
+      FieldName = 'street'
+      Size = 45
+    end
+    object MainTabledistrictIndex: TIntegerField
+      FieldName = 'districtIndex'
+    end
+    object MainTabletel: TIntegerField
+      FieldName = 'tel'
+    end
+    object MainTablephoto: TStringField
+      FieldName = 'photo'
+      Size = 200
+    end
+    object MainTableacademicstepen_academicstepenid: TIntegerField
+      FieldName = 'academicstepen_academicstepenid'
+      Visible = False
+    end
+    object MainTableStepen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'Stepen'
+      LookupDataSet = StepenTable
+      LookupKeyFields = 'academicstepenid'
+      LookupResultField = 'academicstepen'
+      KeyFields = 'academicstepen_academicstepenid'
+      Lookup = True
+    end
+  end
+  object MainSource: TDataSource
+    DataSet = MainTable
+    Left = 168
+    Top = 200
+  end
+  object StepenTable: TADOTable
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'academicstepen'
+    Left = 112
+    Top = 248
+  end
+  object StepenSource: TDataSource
+    DataSet = StepenTable
+    Left = 168
+    Top = 256
+  end
+  object PreviousworkTable: TADOTable
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    IndexFieldNames = 'personal_id'
+    MasterFields = 'id'
+    MasterSource = MainSource
+    TableName = 'previouswork'
+    Left = 112
+    Top = 296
+  end
+  object PreviousworkSource: TDataSource
+    DataSet = PreviousworkTable
+    Left = 168
+    Top = 296
+  end
+end

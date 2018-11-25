@@ -1,0 +1,29 @@
+object DataModule2: TDataModule2
+  OldCreateOrder = False
+  Height = 531
+  Width = 881
+  object ADOConnection1: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=shadow1988;Persist Security Info=Tru' +
+      'e;User ID=root;Extended Properties="DRIVER={MySQL ODBC 5.3 ANSI ' +
+      'Driver};UID=root;PWD=shadow1988;SERVER=localhost;DATABASE=dbpers' +
+      'onal;PORT=3306;COLUMN_SIZE_S32=1;";Initial Catalog=dbpersonal'
+    LoginPrompt = False
+    Left = 24
+    Top = 192
+  end
+  object ADOTable1: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'personal'
+    Left = 104
+    Top = 192
+  end
+  object DataSource1: TDataSource
+    DataSet = ADOTable1
+    Left = 160
+    Top = 184
+  end
+end

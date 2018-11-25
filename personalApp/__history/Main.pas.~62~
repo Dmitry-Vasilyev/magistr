@@ -1,0 +1,179 @@
+unit Main;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Data.Win.ADODB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls, Vcl.StdCtrls, JPEG, Vcl.Menus,
+  Vcl.Buttons;
+
+type
+  TForm1 = class(TForm)
+    DBNavigator1: TDBNavigator;
+    Button1: TButton;
+    DBGrid1: TDBGrid;
+    MainMenu1: TMainMenu;
+    Label1: TLabel;
+    ComboBox1: TComboBox;
+    Edit2: TEdit;
+    Button2: TButton;
+    ComboBox2: TComboBox;
+    Edit3: TEdit;
+    Button3: TButton;
+    Label2: TLabel;
+    Button4: TButton;
+    N6: TMenuItem;
+    N7: TMenuItem;
+    BitBtn1: TBitBtn;
+    ComboBox3: TComboBox;
+    Label3: TLabel;
+    Button5: TButton;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure N7Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+uses Data, Edit, UnitSprav;
+
+
+
+
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+begin
+  // DataModule2.MainTable.IndexFieldNames:='birthdate ASC';
+   if Length(ComboBox3.Text) > 0 then
+      begin
+      DataModule2.MainTable.IndexFieldNames:=ComboBox3.Text+' ASC';
+
+      end
+    else Data.DataModule2.MainTable.Filtered:=false;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+
+  DBNavigator1.BtnClick(nbRefresh);
+    if Data.DataModule2.MainTable.RecordCount = 0 then
+      begin
+        ShowMessage('Добавьте сотрудника в таблицу');
+      end
+      else
+      begin
+        Form4.ShowModal();
+      end;
+
+
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+Var title : TCaption;
+begin
+  title := Combobox1.Text;
+  ShowMessage(title);
+  if title = 'имя' then title := 'name';
+  if title = 'фамилия' then title := 'surname';
+  if title = 'отчество' then title := 'fathername';
+  if title = 'дата рождения' then title := 'birthdate';
+  if title = 'факультет' then title := 'Faculty';
+  if title = 'академическая должность' then title := 'Academicposition';
+  if title = 'административная должность' then title := 'Administrativeposition';
+  if title = 'ученая степень' then title := 'Stepen';
+//  имя
+//фамилия
+//отчество
+//дата рождения
+//факультет
+//академическая должность
+//административная дожность
+//ученая степень
+
+
+
+
+
+if not Data.DataModule2.MainTable.Locate(title, Edit2.Text, [loCaseInsensitive,
+    loPartialKey]) then
+    ShowMessage('Запись не найдена');
+
+end;
+
+
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+    if Length(Edit3.Text) > 0 then
+      begin
+      Data.DataModule2.MainTable.Filtered:=false;
+      Data.DataModule2.MainTable.Filter:=Combobox2.Text + ' LIKE ' + QuotedStr(Edit3.Text+ '%');
+      Data.DataModule2.MainTable.Filtered:=true;
+      Button4.Enabled:=true;
+      end
+    else Data.DataModule2.MainTable.Filtered:=false;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+    Data.DataModule2.MainTable.Filtered:=false;
+    Button4.Enabled:=false;
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+   if Length(ComboBox3.Text) > 0 then
+      begin
+      DataModule2.MainTable.IndexFieldNames:=ComboBox3.Text+' DESC';
+
+      end
+    else Data.DataModule2.MainTable.Filtered:=false;
+end;
+
+procedure TForm1.FormPaint(Sender: TObject);
+begin
+    Data.DataModule2.ADOConnection1.Connected:=true;
+
+      DataModule2.MainTable.Active:=True;
+      DataModule2.StepenTable.Active:=True;
+      DataModule2.PreviousworkTable.Active:=True;
+      DataModule2.FacultyTable.Active:=True;
+      DataModule2.AcademicpositionTable.Active:=True;
+      DataModule2.AdministrativepositionTable.Active:=True;
+      DataModule2.EducationTable.Active:=True;
+      DataModule2.PreviousworkTable.Active:=True;
+      DataModule2.EducationinstituteTable.Active:=True;
+      DataModule2.LanguageTable.Active:=True;
+      DataModule2.ScientificworksTable.Active:=True;
+      DataModule2.TravelsTable.Active:=True;
+      DataModule2.AwardsTable.Active:=True;
+      DataModule2.FamilyTable.Active:=True;
+      DataModule2.MilitaryTable.Active:=True;
+      DataModule2.FamilyStatusTable.Active:=True;
+
+end;
+
+procedure TForm1.N7Click(Sender: TObject);
+begin
+
+ Form2.Show;
+end;
+
+end.

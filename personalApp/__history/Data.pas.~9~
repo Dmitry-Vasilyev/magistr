@@ -1,0 +1,69 @@
+unit Data;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Data.Win.ADODB, Vcl.Menus;
+
+type
+  TDataModule2 = class(TDataModule)
+    ADOConnection1: TADOConnection;
+    MainTable: TADOTable;
+    MainSource: TDataSource;
+    StepenTable: TADOTable;
+    StepenSource: TDataSource;
+    MainTableid: TAutoIncField;
+    MainTablename: TStringField;
+    MainTablesurname: TStringField;
+    MainTablefathername: TStringField;
+    MainTablebirthdate: TStringField;
+    MainTablebirthplace: TStringField;
+    MainTablenationality: TStringField;
+    MainTablecity: TStringField;
+    MainTabledistrict: TStringField;
+    MainTablestreet: TStringField;
+    MainTabledistrictIndex: TIntegerField;
+    MainTabletel: TIntegerField;
+    MainTablephoto: TStringField;
+    MainTableacademicstepen_academicstepenid: TIntegerField;
+    MainTableStepen: TStringField;
+    PreviousworkTable: TADOTable;
+    PreviousworkSource: TDataSource;
+    FacultyTable: TADOTable;
+    FacultySource: TDataSource;
+    MainTablefaculty_idfaculty2: TIntegerField;
+    MainTableFaculty: TStringField;
+    AcademicpositionTable: TADOTable;
+    AcademicpositionSource: TDataSource;
+    MainTableacademicposition_idacademicposition: TIntegerField;
+    MainTableAcademicposition: TStringField;
+    AdministrativepositionTable: TADOTable;
+    AdministrativepositionSource: TDataSource;
+    MainTableadministrativeposition_idadministrativeposition: TIntegerField;
+    MainTableAdmenistrativeposition: TStringField;
+    EducationTable: TADOTable;
+    EducationSource: TDataSource;
+    MainTableeducation_ideducation: TIntegerField;
+    MainTableEducation: TStringField;
+    EducationinstituteTable: TADOTable;
+    EducationinstituteSource: TDataSource;
+    LanguageTable: TADOTable;
+    LanguageSource: TDataSource;
+    ScientificworksTable: TADOTable;
+    ScientificworksSource: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule2: TDataModule2;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

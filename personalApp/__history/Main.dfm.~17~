@@ -1,0 +1,292 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 552
+  ClientWidth = 925
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 759
+    Top = 8
+    Width = 30
+    Height = 13
+    Caption = #1055#1086#1080#1089#1082
+  end
+  object Label2: TLabel
+    Left = 759
+    Top = 120
+    Width = 62
+    Height = 13
+    Caption = #1060#1080#1083#1100#1090#1088#1072#1094#1080#1103
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 462
+    Width = 200
+    Height = 25
+    DataSource = DataModule2.DataSource1
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 358
+    Top = 463
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 8
+    Width = 745
+    Height = 441
+    DataSource = DataModule2.DataSource1
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Width = 20
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'name'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'surname'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'fathername'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'birthdate'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'birthplace'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nationality'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'city'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'district'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'street'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'districtIndex'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tel'
+        Width = 65
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'photo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'academic'
+        Visible = True
+      end>
+  end
+  object ComboBox1: TComboBox
+    Left = 759
+    Top = 27
+    Width = 145
+    Height = 21
+    TabOrder = 3
+    Items.Strings = (
+      'name'
+      'surname'
+      'fathername')
+  end
+  object Edit2: TEdit
+    Left = 759
+    Top = 54
+    Width = 145
+    Height = 21
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 759
+    Top = 81
+    Width = 145
+    Height = 25
+    Caption = #1053#1072#1081#1090#1080
+    TabOrder = 5
+    OnClick = Button2Click
+  end
+  object ComboBox2: TComboBox
+    Left = 759
+    Top = 139
+    Width = 145
+    Height = 21
+    TabOrder = 6
+    Items.Strings = (
+      'name'
+      'surname'
+      'fathername')
+  end
+  object Edit3: TEdit
+    Left = 759
+    Top = 166
+    Width = 145
+    Height = 21
+    TabOrder = 7
+  end
+  object Button3: TButton
+    Left = 759
+    Top = 193
+    Width = 145
+    Height = 25
+    Caption = #1053#1072#1081#1090#1080
+    TabOrder = 8
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 759
+    Top = 224
+    Width = 145
+    Height = 25
+    Caption = #1054#1095#1080#1089#1090#1080#1090' '#1092#1080#1083#1100#1090#1088
+    Enabled = False
+    TabOrder = 9
+    OnClick = Button4Click
+  end
+  object MainMenu1: TMainMenu
+    Left = 704
+    Top = 48
+    object File1: TMenuItem
+      Caption = '&File'
+      object New1: TMenuItem
+        Caption = '&New'
+      end
+      object Open1: TMenuItem
+        Caption = '&Open...'
+      end
+      object Save1: TMenuItem
+        Caption = '&Save'
+      end
+      object SaveAs1: TMenuItem
+        Caption = 'Save &As...'
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Print1: TMenuItem
+        Caption = '&Print...'
+      end
+      object PrintSetup1: TMenuItem
+        Caption = 'P&rint Setup...'
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'E&xit'
+      end
+    end
+    object Edit1: TMenuItem
+      Caption = '&Edit'
+      object Undo1: TMenuItem
+        Caption = '&Undo'
+        ShortCut = 16474
+      end
+      object Repeat1: TMenuItem
+        Caption = '&Repeat <command>'
+      end
+      object N5: TMenuItem
+        Caption = '-'
+      end
+      object Cut1: TMenuItem
+        Caption = 'Cu&t'
+        ShortCut = 16472
+      end
+      object Copy1: TMenuItem
+        Caption = '&Copy'
+        ShortCut = 16451
+      end
+      object Paste1: TMenuItem
+        Caption = '&Paste'
+        ShortCut = 16470
+      end
+      object PasteSpecial1: TMenuItem
+        Caption = 'Paste &Special...'
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object Find1: TMenuItem
+        Caption = '&Find...'
+      end
+      object Replace1: TMenuItem
+        Caption = 'R&eplace...'
+      end
+      object GoTo1: TMenuItem
+        Caption = '&Go To...'
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object Links1: TMenuItem
+        Caption = 'Lin&ks...'
+      end
+      object Object1: TMenuItem
+        Caption = '&Object'
+      end
+    end
+  end
+end

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.561,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\MainForm.pas=C:\dimav\mag\magistr\MainForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.302,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\ListForm.pas=C:\dimav\mag\magistr\ListForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.409,=C:\dimav\mag\magistr\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.493,C:\dimav\mag\magistr\Unit4.pas=C:\dimav\mag\magistr\MenuKPolis.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.122,=C:\dimav\mag\magistr\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\dimav\mag\magistr\PrefKask.pas=C:\dimav\mag\magistr\PrefKasko.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.334,C:\dimav\mag\magistr\Unit4.dfm=C:\dimav\mag\magistr\PrefKasko.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.412,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditForm.pas=C:\dimav\mag\magistr\EditForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.473,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit3.pas=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditPolis.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.033,=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.110,=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.271,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\ListForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.504,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Data.dfm=C:\dimav\mag\magistr\Data.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.473,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit3.dfm=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditPolis.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditPolis.pas=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.334,C:\dimav\mag\magistr\Unit4.pas=C:\dimav\mag\magistr\PrefKasko.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.971,=C:\dimav\mag\magistr\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.274,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditPolis.dfm=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.668,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Data.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\MainForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.302,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\ListForm.dfm=C:\dimav\mag\magistr\ListForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.271,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit2.dfm=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\ListForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.504,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Data.pas=C:\dimav\mag\magistr\Data.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.352,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\MainForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.858,C:\dimav\mag\magistr\PrefKasko.pas=C:\dimav\mag\magistr\PrefKask.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.699,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\magistr.dproj=C:\dimav\mag\magistr\magistr.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.777,C:\dimav\mag\magistr\MenuKPolis.pas=C:\dimav\mag\magistr\PrefK.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,C:\dimav\mag\magistr\PrefKask.dfm=C:\dimav\mag\magistr\PrefKasko.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.777,C:\dimav\mag\magistr\MenuKPolis.dfm=C:\dimav\mag\magistr\PrefK.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.858,C:\dimav\mag\magistr\PrefKasko.dfm=C:\dimav\mag\magistr\PrefKask.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.668,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Data.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.875,=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.412,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\EditForm.dfm=C:\dimav\mag\magistr\EditForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.084,=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.936,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dimav\Documents\Embarcadero\Studio\Projects\magistr.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.493,C:\dimav\mag\magistr\Unit4.dfm=C:\dimav\mag\magistr\MenuKPolis.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.561,C:\Users\dimav\Documents\Embarcadero\Studio\Projects\MainForm.dfm=C:\dimav\mag\magistr\MainForm.dfm</Transaction>
+    <Transaction>2018.11.25 13:04:42.335,=C:\dimav\mag\magistr\Unit5.pas</Transaction>
+    <Transaction>2018.11.25 13:05:50.702,C:\dimav\mag\magistr\MenuPoils.dfm=C:\dimav\mag\magistr\Unit5.dfm</Transaction>
+    <Transaction>2018.11.25 13:05:50.702,C:\dimav\mag\magistr\MenuPoils.pas=C:\dimav\mag\magistr\Unit5.pas</Transaction>
+    <Transaction>2018.11.25 13:06:01.322,C:\dimav\mag\magistr\MenuPolipas.dfm=C:\dimav\mag\magistr\MenuPoils.dfm</Transaction>
+    <Transaction>2018.11.25 13:06:01.322,C:\dimav\mag\magistr\MenuPolipas.pas=C:\dimav\mag\magistr\MenuPoils.pas</Transaction>
+    <Transaction>2018.11.25 13:06:05.969,C:\dimav\mag\magistr\MenuPolis.pas=C:\dimav\mag\magistr\MenuPolipas.pas</Transaction>
+    <Transaction>2018.11.25 13:06:05.969,C:\dimav\mag\magistr\MenuPolis.dfm=C:\dimav\mag\magistr\MenuPolipas.dfm</Transaction>
+    <Transaction>2018.11.25 13:07:27.723,=C:\dimav\mag\magistr\Unit6.pas</Transaction>
+    <Transaction>2018.11.25 13:07:38.621,C:\dimav\mag\magistr\KaskoEdit.pas=C:\dimav\mag\magistr\Unit6.pas</Transaction>
+    <Transaction>2018.11.25 13:07:38.621,C:\dimav\mag\magistr\KaskoEdit.dfm=C:\dimav\mag\magistr\Unit6.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Data.pas"/>
+    <File Path="Data.dfm"/>
+    <File Path="EditForm.pas"/>
+    <File Path="EditForm.dfm"/>
+    <File Path="ListForm.pas"/>
+    <File Path="ListForm.dfm"/>
+    <File Path="MainForm.pas"/>
+    <File Path="MainForm.dfm"/>
+    <File Path="PrefK.pas"/>
+    <File Path="PrefK.dfm"/>
+    <File Path="PrefKasko.pas"/>
+    <File Path="PrefKasko.dfm"/>
+    <File Path="MenuPolis.pas"/>
+    <File Path="MenuPolis.dfm"/>
+    <File Path="KaskoEdit.pas"/>
+    <File Path="KaskoEdit.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

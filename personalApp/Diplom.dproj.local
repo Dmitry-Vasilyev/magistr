@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.536,E:\programming\diplom\personalApp\Unit2.pas=E:\programming\diplom\personalApp\Data.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.684,=C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.223,=E:\programming\diplom\personalApp\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.113,C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Diplom.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.266,=E:\programming\diplom\personalApp\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.700,=C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.956,=E:\programming\diplom\personalApp\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.194,=E:\programming\diplom\personalApp\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.841,=E:\programming\diplom\personalApp\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.467,C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas=E:\programming\diplom\personalApp\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.591,E:\programming\diplom\personalApp\Unit5.pas=E:\programming\diplom\personalApp\FastReport.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.467,C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=E:\programming\diplom\personalApp\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,E:\programming\diplom\personalApp\UnitSprav.dfm=E:\programming\diplom\personalApp\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.699,=E:\programming\diplom\personalApp\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.618,E:\programming\diplom\personalApp\Unit4.dfm=E:\programming\diplom\personalApp\Edit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.618,E:\programming\diplom\personalApp\Unit4.pas=E:\programming\diplom\personalApp\Edit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.536,E:\programming\diplom\personalApp\Unit2.dfm=E:\programming\diplom\personalApp\Data.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.102,E:\programming\diplom\personalApp\UnitSprav.pas=E:\programming\diplom\personalApp\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.591,E:\programming\diplom\personalApp\Unit5.dfm=E:\programming\diplom\personalApp\FastReport.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.182,C:\Users\dimav\OneDrive\Documents\Embarcadero\Studio\Projects\Diplom.dproj=E:\programming\diplom\personalApp\Diplom.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.834,E:\programming\diplom\personalApp\Unit1.pas=E:\programming\diplom\personalApp\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.834,E:\programming\diplom\personalApp\Unit1.dfm=E:\programming\diplom\personalApp\Main.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Data.pas"/>
+    <File Path="Data.dfm"/>
+    <File Path="Main.pas"/>
+    <File Path="Main.dfm"/>
+    <File Path="Edit.pas"/>
+    <File Path="Edit.dfm"/>
+    <File Path="Unit3.pas"/>
+    <File Path="UnitSprav.pas"/>
+    <File Path="UnitSprav.dfm"/>
+    <File Path="FastReport.pas"/>
+    <File Path="FastReport.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>
