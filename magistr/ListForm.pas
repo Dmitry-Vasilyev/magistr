@@ -10,8 +10,8 @@ uses
 type
   TForm2 = class(TForm)
     EditPolis: TButton;
-    DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
     procedure EditPolisClick(Sender: TObject);
   private
     { Private declarations }

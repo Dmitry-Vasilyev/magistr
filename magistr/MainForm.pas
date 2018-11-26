@@ -14,6 +14,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure FormPaint(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,6 +30,37 @@ implementation
 
 uses
 Data, ListForm, PrefK, MenuPolis;
+
+procedure TForm1.FormPaint(Sender: TObject);
+begin
+    Data.DataM.ADOConnection1.Connected:=true;
+
+
+      DataM.tMain.Active:=True;
+      DataM.Tk_autoage.Active:=True;
+      DataM.Tk_progr.Active:=True;
+      DataM.Tk_country.Active:=True;
+      DataM.Tk_stag.Active:=True;
+      DataM.Tk_city_population.Active:=True;
+      DataM.Tk_security.Active:=True;
+      DataM.Tk_auto_type.Active:=True;
+      DataM.Tk_iznos.Active:=True;
+      DataM.Tk_fran.Active:=True;
+      DataM.Tk_discount.Active:=True;
+      DataM.Tk_fiz_ur.Active:=True;
+      DataM.Tk_age.Active:=True;
+      DataM.Tk_taxi.Active:=True;
+      DataM.Tpolis_type.Active:=True;
+      DataM.Ts_pilgi.Active:=True;
+      DataM.Ts_length.Active:=True;
+      DataM.Ts_bp.Active:=True;
+      DataM.Ts_fran.Active:=True;
+      DataM.Ts_bonus.Active:=True;
+      DataM.Tevent.Active:=True;
+
+
+end;
+
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin

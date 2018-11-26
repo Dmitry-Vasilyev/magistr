@@ -22,6 +22,33 @@ type
     DBNavigator2: TDBNavigator;
     DBNavigator3: TDBNavigator;
     DBNavigator4: TDBNavigator;
+    TabSheet1: TTabSheet;
+    TabSheet5: TTabSheet;
+    TabSheet6: TTabSheet;
+    TabSheet7: TTabSheet;
+    TabSheet8: TTabSheet;
+    TabSheet9: TTabSheet;
+    TabSheet10: TTabSheet;
+    TabSheet11: TTabSheet;
+    TabSheet12: TTabSheet;
+    DBNavigator5: TDBNavigator;
+    DBGrid5: TDBGrid;
+    DBNavigator6: TDBNavigator;
+    DBGrid6: TDBGrid;
+    DBNavigator7: TDBNavigator;
+    DBGrid7: TDBGrid;
+    DBNavigator8: TDBNavigator;
+    DBGrid8: TDBGrid;
+    DBNavigator9: TDBNavigator;
+    DBGrid9: TDBGrid;
+    DBNavigator10: TDBNavigator;
+    DBGrid10: TDBGrid;
+    DBNavigator11: TDBNavigator;
+    DBGrid11: TDBGrid;
+    DBNavigator12: TDBNavigator;
+    DBGrid12: TDBGrid;
+    DBNavigator13: TDBNavigator;
+    DBGrid13: TDBGrid;
   private
     { Private declarations }
   public

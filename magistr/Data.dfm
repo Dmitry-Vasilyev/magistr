@@ -1,6 +1,6 @@
 object DataM: TDataM
   OldCreateOrder = False
-  Height = 623
+  Height = 642
   Width = 856
   object ADOConnection1: TADOConnection
     Connected = True
@@ -10,159 +10,280 @@ object DataM: TDataM
       'SERVER=localhost;UID=root;PWD=root;DATABASE=strbd;PORT=3306;COLU' +
       'MN_SIZE_S32=1"'
     LoginPrompt = False
-    Left = 32
-    Top = 24
+    Left = 16
+    Top = 16
   end
-  object Tpolois_person: TADOTable
+  object tMain: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'polis'
-    Left = 128
-    Top = 88
-    object Tpolois_personnum: TIntegerField
-      DisplayLabel = #1085#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
-      DisplayWidth = 12
-      FieldName = 'num'
-    end
-    object Tpolois_personperson_idperson: TIntegerField
-      DisplayWidth = 16
-      FieldName = 'person_idperson'
-    end
-    object Tpolois_personperson_name: TStringField
-      DisplayWidth = 13
-      FieldKind = fkLookup
-      FieldName = 'person_name'
-      LookupDataSet = Tperson
-      LookupKeyFields = 'idperson'
-      LookupResultField = 'firstname'
-      KeyFields = 'person_idperson'
-      Lookup = True
-    end
-    object Tpolois_personperson_lastname: TStringField
-      DisplayWidth = 24
-      FieldKind = fkLookup
-      FieldName = 'person_lastname'
-      LookupDataSet = Tperson
-      LookupKeyFields = 'idperson'
-      LookupResultField = 'lastname'
-      KeyFields = 'person_idperson'
-      Lookup = True
-    end
-    object Tpolois_personvipisan: TStringField
-      FieldName = 'vipisan'
-      Size = 45
-    end
-    object Tpolois_personpolis_type_type: TStringField
-      FieldName = 'polis_type_type'
-      Size = 45
-    end
-    object Tpolois_personkasko_idkasko: TIntegerField
-      FieldName = 'kasko_idkasko'
-    end
-    object Tpolois_personstart: TStringField
-      FieldName = 'start'
-      Size = 45
-    end
-    object Tpolois_personend: TStringField
-      FieldName = 'end'
-      Size = 45
-    end
+    Left = 64
+    Top = 16
   end
-  object Spolis_person: TDataSource
-    DataSet = Tpolois_person
-    Left = 208
-    Top = 88
+  object sMain: TDataSource
+    DataSet = tMain
+    Left = 96
+    Top = 16
   end
-  object Tperson: TADOTable
+  object Tk_autoage: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'person'
-    Left = 128
-    Top = 136
+    TableName = 'k_autoage'
+    Left = 184
+    Top = 16
   end
-  object Tk_age: TADOTable
+  object Sk_autoage: TDataSource
+    DataSet = Tk_autoage
+    Left = 264
+    Top = 16
+  end
+  object Tk_progr: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'k_age'
-    Left = 352
+    TableName = 'k_progr'
+    Left = 184
+    Top = 64
+  end
+  object Sk_progr: TDataSource
+    DataSet = Tk_progr
+    Left = 264
+    Top = 64
+  end
+  object Tk_country: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_country'
+    Left = 184
     Top = 112
   end
-  object Sk_age: TDataSource
-    DataSet = Tk_age
-    Left = 408
+  object Sk_country: TDataSource
+    DataSet = Tk_country
+    Left = 264
     Top = 112
   end
-  object Tk_iznos: TADOTable
+  object Tk_stag: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'k_iznos'
-    Left = 352
-    Top = 176
+    TableName = 'k_stag'
+    Left = 184
+    Top = 160
   end
-  object Sk_iznos: TDataSource
-    DataSet = Tk_iznos
-    Left = 408
-    Top = 176
+  object Sk_stag: TDataSource
+    DataSet = Tk_stag
+    Left = 264
+    Top = 160
+  end
+  object Tk_city_population: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_city_population'
+    Left = 184
+    Top = 208
+  end
+  object Sk_city_population: TDataSource
+    DataSet = Tk_city_population
+    Left = 264
+    Top = 208
   end
   object Tk_security: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'k_security'
-    Left = 352
-    Top = 224
+    Left = 184
+    Top = 256
   end
   object Sk_security: TDataSource
     DataSet = Tk_security
-    Left = 408
-    Top = 224
+    Left = 264
+    Top = 256
+  end
+  object Tk_auto_type: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_auto_type'
+    Left = 184
+    Top = 304
+  end
+  object Sk_auto_type: TDataSource
+    DataSet = Tk_auto_type
+    Left = 264
+    Top = 304
+  end
+  object Tk_iznos: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_iznos'
+    Left = 184
+    Top = 352
+  end
+  object Sk_iznos: TDataSource
+    DataSet = Tk_iznos
+    Left = 264
+    Top = 352
+  end
+  object Tk_fran: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_fran'
+    Left = 184
+    Top = 400
+  end
+  object Sk_fran: TDataSource
+    DataSet = Tk_fran
+    Left = 264
+    Top = 400
+  end
+  object Tk_discount: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_discount'
+    Left = 184
+    Top = 448
+  end
+  object Sk_discount: TDataSource
+    DataSet = Tk_discount
+    Left = 264
+    Top = 448
+  end
+  object Tk_fiz_ur: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_fiz_ur'
+    Left = 184
+    Top = 496
+  end
+  object Sk_fiz_ur: TDataSource
+    DataSet = Tk_fiz_ur
+    Left = 264
+    Top = 496
+  end
+  object Tk_age: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_age'
+    Left = 184
+    Top = 544
+  end
+  object Sk_age: TDataSource
+    DataSet = Tk_age
+    Left = 264
+    Top = 544
+  end
+  object Tk_taxi: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'k_taxi'
+    Left = 184
+    Top = 592
+  end
+  object Sk_taxi: TDataSource
+    DataSet = Tk_taxi
+    Left = 264
+    Top = 592
   end
   object Tpolis_type: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'polis_type'
-    Left = 136
-    Top = 488
+    Left = 16
+    Top = 72
   end
   object Spolis_type: TDataSource
     DataSet = Tpolis_type
-    Left = 208
-    Top = 488
+    Left = 96
+    Top = 72
   end
-  object Tkasko: TADOTable
+  object Ts_pilgi: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'kasko'
-    Left = 128
-    Top = 192
+    TableName = 's_pilgi'
+    Left = 16
+    Top = 120
   end
-  object Sperson: TDataSource
-    DataSet = Tperson
-    Left = 208
-    Top = 136
+  object Ss_pilgi: TDataSource
+    DataSet = Ts_pilgi
+    Left = 96
+    Top = 120
   end
-  object Skasko: TDataSource
-    DataSet = Tkasko
-    Left = 208
-    Top = 192
-  end
-  object Tpolis: TADOTable
+  object Ts_length: TADOTable
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
-    TableName = 'polis'
-    Left = 128
-    Top = 248
+    TableName = 's_length'
+    Left = 16
+    Top = 168
   end
-  object Spolis: TDataSource
-    DataSet = Tpolis
-    Left = 208
-    Top = 248
+  object Ss_length: TDataSource
+    DataSet = Ts_length
+    Left = 96
+    Top = 168
+  end
+  object Ts_bp: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 's_bp'
+    Left = 16
+    Top = 216
+  end
+  object Ss_bp: TDataSource
+    DataSet = Ts_bp
+    Left = 96
+    Top = 216
+  end
+  object Ts_fran: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 's_fran'
+    Left = 16
+    Top = 264
+  end
+  object Ss_fran: TDataSource
+    DataSet = Ts_fran
+    Left = 96
+    Top = 264
+  end
+  object Ts_bonus: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 's_bonus'
+    Left = 16
+    Top = 312
+  end
+  object Ss_bonus: TDataSource
+    DataSet = Ts_bonus
+    Left = 96
+    Top = 312
+  end
+  object Tevent: TADOTable
+    Active = True
+    Connection = ADOConnection1
+    CursorType = ctStatic
+    TableName = 'event'
+    Left = 16
+    Top = 360
+  end
+  object Sevent: TDataSource
+    DataSet = Tevent
+    Left = 96
+    Top = 360
   end
 end
