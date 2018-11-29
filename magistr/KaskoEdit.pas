@@ -29,7 +29,6 @@ type
     Label7: TLabel;
     DBLookupComboBox6: TDBLookupComboBox;
     Label10: TLabel;
-    DBNavigator1: TDBNavigator;
     DBLookupComboBox4: TDBLookupComboBox;
     Label8: TLabel;
     DBLookupComboBox5: TDBLookupComboBox;
@@ -98,6 +97,19 @@ type
     DBEdit20: TDBEdit;
     Label36: TLabel;
     DBEdit21: TDBEdit;
+    Label37: TLabel;
+    Label38: TLabel;
+    Label39: TLabel;
+    DBEdit22: TDBEdit;
+    Label40: TLabel;
+    Label41: TLabel;
+    Button2: TButton;
+    Button3: TButton;
+    Button1: TButton;
+    procedure CalcPrice(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -106,11 +118,67 @@ type
 
 var
   Form6: TForm6;
+  kAutoAge, kProgStr, kCountry, kStag, kPopulation, kSecurity,
+  kAutoType, kIznos, kFran, kDiscount, kFisUr, kAge, kTaxi, autoPrice,
+  StrPrice, TotalKoef: Double;
 
 implementation
 
 {$R *.dfm}
 
 uses Data;
+
+procedure TForm6.Button2Click(Sender: TObject);
+begin
+Data.DataM.tMain.Post;
+Form6.Close;
+end;
+
+procedure TForm6.Button3Click(Sender: TObject);
+begin
+Data.DataM.tMain.Delete;
+Form6.Close;
+end;
+
+procedure TForm6.CalcPrice(Sender: TObject);
+begin
+kAutoAge := DBLookupComboBox15.Text.ToDouble;
+kProgStr := DBLookupComboBox16.Text.ToDouble;
+kCountry := DBLookupComboBox17.Text.ToDouble;
+kStag := DBLookupComboBox18.Text.ToDouble;
+kPopulation := DBLookupComboBox19.Text.ToDouble;
+kSecurity := DBLookupComboBox20.Text.ToDouble;
+kAutoType := DBLookupComboBox21.Text.ToDouble;
+kIznos := DBLookupComboBox22.Text.ToDouble;
+kFran := DBLookupComboBox23.Text.ToDouble;
+kDiscount := DBLookupComboBox24.Text.ToDouble;
+kFisUr := DBLookupComboBox25.Text.ToDouble;
+kAge := DBLookupComboBox26.Text.ToDouble;
+kTaxi := DBLookupComboBox27.Text.ToDouble;
+autoPrice := DBEdit22.Field.Text.ToDouble;
+
+TotalKoef := kAutoAge;
+TotalKoef := TotalKoef * kProgStr;
+TotalKoef := TotalKoef * kCountry;
+TotalKoef := TotalKoef * kStag;
+TotalKoef := TotalKoef * kPopulation;
+TotalKoef := TotalKoef * kSecurity;
+TotalKoef := TotalKoef * kAutoType;
+TotalKoef := TotalKoef * kIznos;
+TotalKoef := TotalKoef * kFran;
+TotalKoef := TotalKoef * kDiscount;
+TotalKoef := TotalKoef * kFisUr;
+TotalKoef := TotalKoef * kAge;
+TotalKoef := TotalKoef * kTaxi;
+strPrice := TotalKoef / 100 * autoPrice;
+
+Label38.Caption:= formatfloat('0.##', TotalKoef);
+Label41.Caption:= formatfloat('0.##', strPrice);
+end;
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+Form6.CalcPrice(Form6);
+end;
 
 end.

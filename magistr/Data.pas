@@ -50,6 +50,45 @@ type
     Ss_bonus: TDataSource;
     Tevent: TADOTable;
     Sevent: TDataSource;
+    Tk_autoageid_autoage: TAutoIncField;
+    Tk_autoageautoage: TStringField;
+    Tk_autoagek: TFloatField;
+    Tk_progridk_progr: TAutoIncField;
+    Tk_progrprogr: TStringField;
+    Tk_progrk: TFloatField;
+    Tk_countryidk_country: TAutoIncField;
+    Tk_countrycountry: TStringField;
+    Tk_countryk: TFloatField;
+    Tk_stagidk_age: TAutoIncField;
+    Tk_stagstag: TStringField;
+    Tk_stagk: TFloatField;
+    Tk_city_populationidk_city_population: TAutoIncField;
+    Tk_city_populationcity_population: TStringField;
+    Tk_city_populationk: TFloatField;
+    Tk_securityid_security: TAutoIncField;
+    Tk_securitysecurity: TStringField;
+    Tk_securityk: TFloatField;
+    Tk_auto_typeidk_auto_type: TAutoIncField;
+    Tk_auto_typeauto_type: TStringField;
+    Tk_auto_typek: TFloatField;
+    Tk_iznosid_iznos: TAutoIncField;
+    Tk_iznosiznos: TStringField;
+    Tk_iznosk: TFloatField;
+    Tk_franidk_fran: TAutoIncField;
+    Tk_franfran: TStringField;
+    Tk_frank: TFloatField;
+    Tk_discountidk_discount: TAutoIncField;
+    Tk_discountdiscount: TStringField;
+    Tk_discountk: TFloatField;
+    Tk_fiz_uridk_fiz_ur: TAutoIncField;
+    Tk_fiz_urfiz_ur: TStringField;
+    Tk_fiz_urk: TFloatField;
+    Tk_ageidk_stag: TAutoIncField;
+    Tk_ageage: TStringField;
+    Tk_agek: TFloatField;
+    Tk_taxiidk_taxi: TAutoIncField;
+    Tk_taxitaxi: TStringField;
+    Tk_taxik: TFloatField;
   private
     { Private declarations }
   public

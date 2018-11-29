@@ -28,6 +28,11 @@ KaskoEdit, Data;
 
 procedure TForm5.Button1Click(Sender: TObject);
 begin
+Data.DataM.tMain.Insert;
+Data.DataM.tMain.FieldByName('num').AsInteger:= Data.DataM.tMain.RecordCount + 1;
+Data.DataM.tMain.FieldByName('polis_type_type').AsString:= ' ¿— Œ';
+Data.DataM.tMain.Refresh;
+KaskoEdit.Form6.CalcPrice(Form5);
 KaskoEdit.Form6.ShowModal();
 end;
 
