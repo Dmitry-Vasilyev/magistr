@@ -103,9 +103,9 @@ type
     DBEdit22: TDBEdit;
     Label40: TLabel;
     Label41: TLabel;
+    Button1: TButton;
     Button2: TButton;
     Button3: TButton;
-    Button1: TButton;
     procedure CalcPrice(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
