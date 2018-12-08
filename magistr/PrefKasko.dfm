@@ -17,11 +17,12 @@
     Left = 0
     Top = 24
     Width = 569
-    Height = 225
-    ActivePage = Износ
+    Height = 193
+    ActivePage = TabSheet6
     TabOrder = 0
     object Износ: TTabSheet
       Caption = #1042#1086#1079#1088#1072#1089#1090' '#1072#1074#1090#1086#1084#1086#1073#1080#1083#1103
+      ExplicitHeight = 197
       object DBGrid2: TDBGrid
         Left = 0
         Top = 0
@@ -47,6 +48,7 @@
     object TabSheet2: TTabSheet
       Caption = #1055#1088#1086#1075#1088#1072#1084#1084#1072' '#1089#1090#1088#1072#1093#1086#1074#1072#1085#1080#1103
       ImageIndex = 1
+      ExplicitHeight = 197
       object DBGrid1: TDBGrid
         Left = 3
         Top = 3
@@ -72,6 +74,7 @@
     object TabSheet4: TTabSheet
       Caption = #1057#1090#1088#1072#1085#1072
       ImageIndex = 3
+      ExplicitHeight = 197
       object DBGrid3: TDBGrid
         Left = 0
         Top = 0
@@ -97,8 +100,7 @@
     object TabSheet3: TTabSheet
       Caption = #1057#1090#1072#1078
       ImageIndex = 3
-      ExplicitLeft = 8
-      ExplicitTop = 16
+      ExplicitHeight = 197
       object DBGrid4: TDBGrid
         Left = -4
         Top = 3
@@ -124,6 +126,7 @@
     object TabSheet1: TTabSheet
       Caption = #1053#1072#1089#1077#1083#1077#1085#1080#1077
       ImageIndex = 4
+      ExplicitHeight = 197
       object DBNavigator7: TDBNavigator
         Left = 7
         Top = 126
@@ -149,6 +152,7 @@
     object TabSheet5: TTabSheet
       Caption = #1041#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1100
       ImageIndex = 5
+      ExplicitHeight = 197
       object DBNavigator5: TDBNavigator
         Left = 3
         Top = 126
@@ -174,6 +178,7 @@
     object TabSheet6: TTabSheet
       Caption = #1048#1079#1085#1086#1089
       ImageIndex = 6
+      ExplicitHeight = 197
       object DBNavigator6: TDBNavigator
         Left = 0
         Top = 129
@@ -224,7 +229,6 @@
     object TabSheet8: TTabSheet
       Caption = #1042#1086#1079#1088#1072#1089#1090
       ImageIndex = 8
-      ExplicitLeft = 8
       object DBNavigator9: TDBNavigator
         Left = 4
         Top = 123
@@ -300,7 +304,6 @@
     object TabSheet11: TTabSheet
       Caption = #1058#1080#1087' '#1072#1074#1090#1086#1084#1086#1073#1080#1083#1103
       ImageIndex = 11
-      ExplicitLeft = 0
       object DBNavigator12: TDBNavigator
         Left = 7
         Top = 123
@@ -326,7 +329,6 @@
     object TabSheet12: TTabSheet
       Caption = #1060#1088#1072#1085#1096#1080#1079#1072
       ImageIndex = 12
-      ExplicitLeft = 8
       object DBNavigator13: TDBNavigator
         Left = 3
         Top = 129

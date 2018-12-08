@@ -4,17 +4,19 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Menus;
 
 type
   TForm1 = class(TForm)
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormPaint(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,7 +31,7 @@ implementation
 {$R *.dfm}
 
 uses
-Data, ListForm, PrefK, MenuPolis;
+Data, ListForm, PrefK, MenuPolis, ListEvent;
 
 procedure TForm1.FormPaint(Sender: TObject);
 begin
@@ -53,9 +55,11 @@ begin
       DataM.Tpolis_type.Active:=True;
       DataM.Ts_pilgi.Active:=True;
       DataM.Ts_length.Active:=True;
-      DataM.Ts_bp.Active:=True;
       DataM.Ts_fran.Active:=True;
       DataM.Ts_bonus.Active:=True;
+      DataM.Ts_auto_type.Active:=True;
+      DataM.Ts_city_population.Active:=True;
+      DataM.Ts_str_sum.Active:=True;
       DataM.Tevent.Active:=True;
 
 
@@ -65,6 +69,7 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
 Form2.ShowModal();
+Data.DataM.tMain.Refresh;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -75,6 +80,13 @@ end;
 procedure TForm1.Button3Click(Sender: TObject);
 begin
 MenuPolis.Form5.ShowModal();
+Data.DataM.tMain.Refresh;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+ListEvent.Form10.ShowModal();
+Data.DataM.Tevent.Refresh;
 end;
 
 end.

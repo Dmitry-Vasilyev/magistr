@@ -9,7 +9,9 @@ uses
 type
   TForm5 = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,7 +26,7 @@ implementation
 {$R *.dfm}
 
 uses
-KaskoEdit, Data;
+KaskoEdit, Data, GoEdit;
 
 procedure TForm5.Button1Click(Sender: TObject);
 begin
@@ -35,6 +37,17 @@ Data.DataM.tMain.Refresh;
 Data.DataM.tMain.Edit;
 KaskoEdit.Form6.CalcPrice(Form5);
 KaskoEdit.Form6.ShowModal();
+end;
+
+procedure TForm5.Button2Click(Sender: TObject);
+begin
+Data.DataM.tMain.Insert;
+Data.DataM.tMain.FieldByName('num').AsInteger:= Data.DataM.tMain.RecordCount + 1;
+Data.DataM.tMain.FieldByName('polis_type_type').AsString:= 'няжоб';
+Data.DataM.tMain.Refresh;
+Data.DataM.tMain.Edit;
+GoEdit.Form7.CalcPrice(Form5);
+GoEdit.Form7.ShowModal();
 end;
 
 end.

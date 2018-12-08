@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 0
   Caption = 'ListForm'
   ClientHeight = 434
-  ClientWidth = 698
+  ClientWidth = 785
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,9 +13,16 @@ object Form2: TForm2
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object Label1: TLabel
+    Left = 591
+    Top = 5
+    Width = 30
+    Height = 13
+    Caption = #1055#1086#1080#1089#1082
+  end
   object EditPolis: TButton
-    Left = 520
-    Top = 166
+    Left = 337
+    Top = 366
     Width = 121
     Height = 34
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
@@ -23,18 +30,18 @@ object Form2: TForm2
     OnClick = EditPolisClick
   end
   object DBNavigator1: TDBNavigator
-    Left = 24
-    Top = 134
+    Left = 8
+    Top = 366
     Width = 240
     Height = 25
     DataSource = DataM.sMain
     TabOrder = 1
   end
   object DBGrid1: TDBGrid
-    Left = 24
+    Left = 8
     Top = 8
-    Width = 320
-    Height = 120
+    Width = 577
+    Height = 352
     DataSource = DataM.sMain
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
@@ -46,237 +53,82 @@ object Form2: TForm2
       item
         Expanded = False
         FieldName = 'num'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'vipisan'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'start'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'end'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'price'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'firstname'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'lastname'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'fathername'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'birthdate'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'birthplace'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'city'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'street'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'city_index'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'tel'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'inn'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_price'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_mark'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_model'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_number'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_year'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_vin'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_city'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'a_volume'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'd_name'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'd_seria'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'd_who_make'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'd_date'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 's_stiker'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_autoage_id_autoage'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_progr_idk_progr'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_country_idk_country'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_age_idk_age'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_city_population_idk_city_population'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_security_id_security'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_auto_type_idk_auto_type'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_iznos_id_iznos'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_taxi_idk_taxi'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_stag_idk_stag'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_fiz_ur_idk_fiz_ur'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_discount_idk_discount'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'k_fran_idk_fran'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 's_bonus_ids_bonus'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 's_length_ids_length'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 's_fran_ids_fran'
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 's_bp_ids_bp'
+        Width = 76
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'polis_type_type'
+        Width = 76
         Visible = True
       end
       item
         Expanded = False
-        FieldName = 'pligi_idpligi'
+        FieldName = 'lastname'
+        Width = 76
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'firstname'
+        Width = 76
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'start'
+        Width = 76
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'end'
+        Width = 76
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'price'
+        Width = 76
         Visible = True
       end>
+  end
+  object ComboBox1: TComboBox
+    Left = 591
+    Top = 24
+    Width = 145
+    Height = 21
+    Style = csDropDownList
+    ItemIndex = 0
+    TabOrder = 3
+    Text = #1053#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
+    Items.Strings = (
+      #1053#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
+      #1060#1072#1084#1080#1083#1080#1103)
+  end
+  object Edit1: TEdit
+    Left = 591
+    Top = 51
+    Width = 145
+    Height = 21
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Left = 591
+    Top = 78
+    Width = 145
+    Height = 25
+    Caption = #1053#1072#1081#1090#1080
+    TabOrder = 5
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 464
+    Top = 366
+    Width = 121
+    Height = 34
+    Caption = #1057#1090#1088#1072#1093#1086#1074#1086#1077' '#1089#1086#1073#1099#1090#1080#1077
+    TabOrder = 6
+    OnClick = Button2Click
   end
 end

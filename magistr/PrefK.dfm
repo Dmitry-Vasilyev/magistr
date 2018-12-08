@@ -14,12 +14,21 @@ object Prefernces: TPrefernces
   PixelsPerInch = 96
   TextHeight = 13
   object Button1: TButton
-    Left = 24
-    Top = 24
+    Left = 8
+    Top = 8
     Width = 75
     Height = 25
     Caption = #1050#1040#1057#1050#1054
     TabOrder = 0
     OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 8
+    Top = 39
+    Width = 75
+    Height = 25
+    Caption = #1054#1057#1062#1055#1042
+    TabOrder = 1
+    OnClick = Button2Click
   end
 end

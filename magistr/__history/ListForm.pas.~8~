@@ -1,0 +1,58 @@
+unit ListForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.Grids,
+  Vcl.DBGrids, Vcl.ExtCtrls, Vcl.DBCtrls;
+
+type
+  TForm2 = class(TForm)
+    EditPolis: TButton;
+    DBNavigator1: TDBNavigator;
+    DBGrid1: TDBGrid;
+    Label1: TLabel;
+    procedure EditPolisClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+  polisType: String;
+
+implementation
+
+{$R *.dfm}
+uses Data, EditForm, KaskoEdit, GoEdit;
+
+procedure TForm2.EditPolisClick(Sender: TObject);
+begin
+
+Label1.Caption := Data.DataM.tMain.FieldByName('polis_type_type').AsString;
+
+
+Data.DataM.tMain.Edit;
+KaskoEdit.Form6.CalcPrice(Form2);
+KaskoEdit.Form6.ShowModal();
+
+polisType := Data.DataM.tMain.FieldByName('polis_type_type').AsString;
+
+If polisType = ' ¿— Œ' Then
+Begin
+KaskoEdit.Form6.CalcPrice(Form2);
+KaskoEdit.Form6.ShowModal();
+End;
+
+If polisType = 'Œ—÷œ¬' Then
+Begin
+GoEdit.Form7.CalcPrice(Form2);
+GoEdit.Form7.ShowModal();
+End;
+
+end;
+
+end.

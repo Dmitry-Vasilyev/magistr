@@ -104,8 +104,8 @@ type
     Label40: TLabel;
     Label41: TLabel;
     Button1: TButton;
-    Button2: TButton;
     Button3: TButton;
+    Button2: TButton;
     procedure CalcPrice(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -174,6 +174,8 @@ strPrice := TotalKoef / 100 * autoPrice;
 
 Label38.Caption:= formatfloat('0.##', TotalKoef);
 Label41.Caption:= formatfloat('0.##', strPrice);
+
+Data.DataM.tMain.FieldByName('price').AsFloat := strPrice;
 end;
 
 procedure TForm6.Button1Click(Sender: TObject);

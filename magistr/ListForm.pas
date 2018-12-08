@@ -12,7 +12,14 @@ type
     EditPolis: TButton;
     DBNavigator1: TDBNavigator;
     DBGrid1: TDBGrid;
+    ComboBox1: TComboBox;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Button1: TButton;
+    Button2: TButton;
     procedure EditPolisClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -21,15 +28,58 @@ type
 
 var
   Form2: TForm2;
+  polisType: String;
 
 implementation
 
 {$R *.dfm}
-uses Data, EditForm;
+uses Data, EditForm, KaskoEdit, GoEdit, EventEdit;
+
+procedure TForm2.Button1Click(Sender: TObject);
+Var title : TCaption;
+begin
+  title := Combobox1.Text;
+  if title = 'Номер полиса' then title := 'num';
+  if title = 'Фамилия' then title := 'lastname';
+
+if not Data.DataM.tMain.Locate(title, Edit1.Text, [loCaseInsensitive,
+    loPartialKey]) then
+    ShowMessage('Запись не найдена');
+
+end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+Data.DataM.Tevent.Insert;
+Data.DataM.Tevent.FieldByName('polis_num').AsInteger:= Data.DataM.tMain.FieldByName('num').AsInteger;
+Data.DataM.Tevent.Refresh;
+Data.DataM.Tevent.Edit;
+
+EventEdit.Form9.ShowModal();
+end;
 
 procedure TForm2.EditPolisClick(Sender: TObject);
 begin
-Form3.showModal();
+
+Label1.Caption := Data.DataM.tMain.FieldByName('polis_type_type').AsString;
+
+
+Data.DataM.tMain.Edit;
+
+polisType := Data.DataM.tMain.FieldByName('polis_type_type').AsString;
+
+If polisType = 'КАСКО' Then
+Begin
+KaskoEdit.Form6.CalcPrice(Form2);
+KaskoEdit.Form6.ShowModal();
+End;
+
+If polisType = 'ОСЦПВ' Then
+Begin
+GoEdit.Form7.CalcPrice(Form2);
+GoEdit.Form7.ShowModal();
+End;
+
 end;
 
 end.

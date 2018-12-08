@@ -9,7 +9,9 @@ uses
 type
   TPrefernces = class(TForm)
     Button1: TButton;
+    Button2: TButton;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,11 +25,16 @@ implementation
 
 {$R *.dfm}
 
-uses PrefKasko;
+uses PrefKasko, PrefO;
 
 procedure TPrefernces.Button1Click(Sender: TObject);
 begin
 Form4.ShowModal();
+end;
+
+procedure TPrefernces.Button2Click(Sender: TObject);
+begin
+Form8.ShowModal();
 end;
 
 end.
