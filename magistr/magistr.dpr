@@ -14,7 +14,8 @@ uses
   PrefO in 'PrefO.pas' {Form8},
   EventEdit in 'EventEdit.pas' {Form9},
   ListEvent in 'ListEvent.pas' {Form10},
-  FastReport in 'FastReport.pas' {Form11};
+  FastReport in 'FastReport.pas' {Form11},
+  Import in 'Import.pas' {Form12};
 
 {$R *.res}
 
@@ -34,5 +35,6 @@ begin
   Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm10, Form10);
   Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm12, Form12);
   Application.Run;
 end.

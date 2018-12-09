@@ -17,9 +17,11 @@ type
     Label1: TLabel;
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
     procedure EditPolisClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,7 +35,7 @@ var
 implementation
 
 {$R *.dfm}
-uses Data, EditForm, KaskoEdit, GoEdit, EventEdit;
+uses Data, EditForm, KaskoEdit, GoEdit, EventEdit, Import;
 
 procedure TForm2.Button1Click(Sender: TObject);
 Var title : TCaption;
@@ -56,6 +58,11 @@ Data.DataM.Tevent.Refresh;
 Data.DataM.Tevent.Edit;
 
 EventEdit.Form9.ShowModal();
+end;
+
+procedure TForm2.Button3Click(Sender: TObject);
+begin
+Import.Form12.ShowModal();
 end;
 
 procedure TForm2.EditPolisClick(Sender: TObject);
