@@ -10,7 +10,6 @@ uses
 type
   TForm2 = class(TForm)
     EditPolis: TButton;
-    DBNavigator1: TDBNavigator;
     DBGrid1: TDBGrid;
     ComboBox1: TComboBox;
     Edit1: TEdit;
@@ -18,10 +17,12 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Button4: TButton;
     procedure EditPolisClick(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +64,11 @@ end;
 procedure TForm2.Button3Click(Sender: TObject);
 begin
 Import.Form12.ShowModal();
+end;
+
+procedure TForm2.Button4Click(Sender: TObject);
+begin
+Data.DataM.tMain.Delete;
 end;
 
 procedure TForm2.EditPolisClick(Sender: TObject);

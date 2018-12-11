@@ -10,13 +10,14 @@ uses
 type
   TForm10 = class(TForm)
     DBGrid1: TDBGrid;
-    DBNavigator1: TDBNavigator;
     Button1: TButton;
     Label1: TLabel;
     Edit1: TEdit;
     Button2: TButton;
+    Button3: TButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +49,11 @@ begin
 if not Data.DataM.Tevent.Locate(title, Edit1.Text, [loCaseInsensitive,
     loPartialKey]) then
     ShowMessage('Запись не найдена');
+end;
+
+procedure TForm10.Button3Click(Sender: TObject);
+begin
+Data.DataM.Tevent.Delete;
 end;
 
 end.

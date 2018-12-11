@@ -14,13 +14,13 @@ object DataM: TDataM
     Top = 16
   end
   object tMain: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'polis'
     Left = 56
     Top = 16
     object tMainnum: TIntegerField
+      DisplayLabel = #8470' '#1087#1086#1083#1080#1089#1072
       FieldName = 'num'
     end
     object tMainvipisan: TStringField
@@ -28,26 +28,27 @@ object DataM: TDataM
       Size = 45
     end
     object tMainstart: TStringField
+      DisplayLabel = #1053#1072#1095#1072#1083#1086' '#1076#1077#1081#1089#1090#1074#1080#1103
       FieldName = 'start'
       Size = 45
     end
     object tMainend: TStringField
+      DisplayLabel = #1050#1086#1085#1077#1094' '#1076#1077#1081#1089#1090#1074#1080#1103
       FieldName = 'end'
       Size = 45
     end
-    object tMainprice: TFloatField
-      FieldName = 'price'
-      DisplayFormat = '#0.00'
-    end
     object tMainfirstname: TStringField
+      DisplayLabel = #1048#1084#1103
       FieldName = 'firstname'
       Size = 45
     end
     object tMainlastname: TStringField
+      DisplayLabel = #1060#1072#1084#1080#1083#1080#1103
       FieldName = 'lastname'
       Size = 45
     end
     object tMainfathername: TStringField
+      DisplayLabel = #1054#1090#1095#1077#1089#1090#1074#1086
       FieldName = 'fathername'
       Size = 45
     end
@@ -120,9 +121,6 @@ object DataM: TDataM
       FieldName = 'd_who_make'
       Size = 45
     end
-    object tMaind_date: TIntegerField
-      FieldName = 'd_date'
-    end
     object tMains_stiker: TStringField
       FieldName = 's_stiker'
       Size = 45
@@ -176,6 +174,7 @@ object DataM: TDataM
       FieldName = 's_fran_ids_fran'
     end
     object tMainpolis_type_type: TStringField
+      DisplayLabel = #1058#1080#1087' '#1087#1086#1083#1080#1089#1072
       FieldName = 'polis_type_type'
       Size = 45
     end
@@ -195,6 +194,15 @@ object DataM: TDataM
       FieldName = 's_price'
       Size = 45
     end
+    object tMaind_date: TStringField
+      FieldName = 'd_date'
+      Size = 45
+    end
+    object tMainprice: TFloatField
+      DisplayLabel = #1055#1083#1072#1090#1077#1078
+      FieldName = 'price'
+      DisplayFormat = '#0.00'
+    end
   end
   object sMain: TDataSource
     DataSet = tMain
@@ -213,10 +221,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_autoageautoage: TStringField
+      DisplayLabel = #1042#1086#1079#1088#1072#1089#1090' '#1072#1074#1090#1086
       FieldName = 'autoage'
       Size = 105
     end
     object Tk_autoagek: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -238,10 +248,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_progrprogr: TStringField
+      DisplayLabel = #1055#1088#1086#1075#1088#1072#1084#1084#1072' '#1089#1090#1088#1072#1093#1086#1074#1072#1085#1080#1103
       FieldName = 'progr'
       Size = 45
     end
     object Tk_progrk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -263,10 +275,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_countrycountry: TStringField
+      DisplayLabel = #1057#1090#1088#1072#1085#1072
       FieldName = 'country'
       Size = 45
     end
     object Tk_countryk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -288,10 +302,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_stagstag: TStringField
+      DisplayLabel = #1057#1090#1072#1078
       FieldName = 'stag'
       Size = 45
     end
     object Tk_stagk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -313,10 +329,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_city_populationcity_population: TStringField
+      DisplayLabel = #1055#1083#1086#1090#1085#1086#1089#1090#1100' '#1085#1072#1089#1077#1083#1077#1085#1080#1103
       FieldName = 'city_population'
       Size = 45
     end
     object Tk_city_populationk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -338,10 +356,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_securitysecurity: TStringField
+      DisplayLabel = #1041#1077#1079#1086#1087#1072#1089#1085#1086#1089#1090#1100
       FieldName = 'security'
       Size = 105
     end
     object Tk_securityk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -363,10 +383,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_auto_typeauto_type: TStringField
+      DisplayLabel = #1058#1080#1087' '#1072#1074#1090#1086#1084#1086#1073#1080#1083#1103
       FieldName = 'auto_type'
       Size = 85
     end
     object Tk_auto_typek: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
       EditFormat = '#0.00'
@@ -389,10 +411,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_iznosiznos: TStringField
+      DisplayLabel = #1048#1079#1085#1086#1089' '#1072#1074#1090#1086#1084#1086#1073#1080#1083#1103
       FieldName = 'iznos'
       Size = 105
     end
     object Tk_iznosk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -414,10 +438,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_franfran: TStringField
+      DisplayLabel = #1060#1088#1072#1085#1096#1080#1079#1072
       FieldName = 'fran'
       Size = 45
     end
     object Tk_frank: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -439,10 +465,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_discountdiscount: TStringField
+      DisplayLabel = #1057#1082#1080#1076#1082#1072
       FieldName = 'discount'
       Size = 45
     end
     object Tk_discountk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -464,10 +492,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_fiz_urfiz_ur: TStringField
+      DisplayLabel = #1057#1090#1072#1090#1091#1089' '#1089#1090#1088#1072#1093#1086#1074#1072#1090#1077#1083#1103
       FieldName = 'fiz_ur'
       Size = 45
     end
     object Tk_fiz_urk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -489,10 +519,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_ageage: TStringField
+      DisplayLabel = #1042#1086#1079#1088#1072#1089#1090
       FieldName = 'age'
       Size = 65
     end
     object Tk_agek: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -503,7 +535,6 @@ object DataM: TDataM
     Top = 544
   end
   object Tk_taxi: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 'k_taxi'
@@ -514,10 +545,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Tk_taxitaxi: TStringField
+      DisplayLabel = #1058#1072#1082#1089#1080
       FieldName = 'taxi'
       Size = 105
     end
     object Tk_taxik: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -534,6 +567,11 @@ object DataM: TDataM
     TableName = 'polis_type'
     Left = 344
     Top = 64
+    object Tpolis_typetype: TStringField
+      DisplayLabel = #1058#1080#1087' '#1087#1086#1083#1080#1089#1072
+      FieldName = 'type'
+      Size = 45
+    end
   end
   object Spolis_type: TDataSource
     DataSet = Tpolis_type
@@ -552,10 +590,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_pilgipilgi: TStringField
+      DisplayLabel = #1051#1100#1075#1086#1090#1099
       FieldName = 'pilgi'
       Size = 45
     end
     object Ts_pilgik: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -577,10 +617,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_lengthlength: TStringField
+      DisplayLabel = #1057#1088#1086#1082' '#1076#1077#1081#1089#1090#1074#1080#1103
       FieldName = 'length'
       Size = 45
     end
     object Ts_lengthk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -602,6 +644,7 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_franfran: TStringField
+      DisplayLabel = #1060#1088#1072#1085#1096#1080#1079#1072
       FieldName = 'fran'
       Size = 45
     end
@@ -623,10 +666,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_bonusbonus: TStringField
+      DisplayLabel = #1057#1082#1080#1076#1082#1072
       FieldName = 'bonus'
       Size = 45
     end
     object Ts_bonusk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -643,6 +688,40 @@ object DataM: TDataM
     TableName = 'event'
     Left = 344
     Top = 16
+    object Teventidevent: TAutoIncField
+      FieldName = 'idevent'
+      ReadOnly = True
+    end
+    object Teventdate: TStringField
+      DisplayLabel = #1044#1072#1090#1072' '#1089#1086#1073#1099#1090#1080#1103
+      FieldName = 'date'
+      Size = 45
+    end
+    object Teventsum: TFloatField
+      DisplayLabel = #1059#1097#1077#1088#1073
+      FieldName = 'sum'
+    end
+    object Teventcity: TStringField
+      DisplayLabel = #1052#1077#1089#1090#1086' '#1087#1088#1086#1080#1089#1096#1077#1089#1090#1074#1080#1103
+      FieldName = 'city'
+      Size = 45
+    end
+    object Teventviplata: TFloatField
+      DisplayLabel = #1042#1099#1087#1083#1072#1095#1077#1085#1086
+      FieldName = 'viplata'
+    end
+    object Teventpolis_num: TIntegerField
+      DisplayLabel = #1053#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
+      FieldName = 'polis_num'
+    end
+    object Teventindex: TStringField
+      FieldName = 'index'
+      Size = 45
+    end
+    object Teventstreet: TStringField
+      FieldName = 'street'
+      Size = 45
+    end
   end
   object Sevent: TDataSource
     DataSet = Tevent
@@ -650,7 +729,6 @@ object DataM: TDataM
     Top = 16
   end
   object Ts_auto_type: TADOTable
-    Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
     TableName = 's_auto_type'
@@ -661,6 +739,7 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_auto_typeauto_type: TStringField
+      DisplayLabel = #1058#1080#1087' '#1072#1074#1090#1086
       FieldName = 'auto_type'
       Size = 45
     end
@@ -686,10 +765,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_city_populationcity_population: TStringField
+      DisplayLabel = #1055#1083#1086#1090#1085#1086#1089#1090#1100' '#1085#1072#1089#1077#1083#1077#1085#1080#1103
       FieldName = 'city_population'
       Size = 45
     end
     object Ts_city_populationk: TFloatField
+      DisplayLabel = #1050#1086#1101#1092#1092#1080#1094#1080#1077#1085#1090
       FieldName = 'k'
       DisplayFormat = '#0.00'
     end
@@ -711,10 +792,12 @@ object DataM: TDataM
       ReadOnly = True
     end
     object Ts_str_sumstr_sum_life: TStringField
+      DisplayLabel = #1057#1091#1084#1084#1072' '#1079#1076#1086#1088#1086#1074#1100#1103
       FieldName = 'str_sum_life'
       Size = 45
     end
     object Ts_str_sumstr_sum_auto: TStringField
+      DisplayLabel = #1052#1072#1090#1077#1088#1080#1072#1083#1100#1085#1099#1081' '#1091#1097#1077#1088#1073
       FieldName = 'str_sum_auto'
       Size = 45
     end

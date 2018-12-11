@@ -10,6 +10,9 @@ type
   TForm5 = class(TForm)
     Button1: TButton;
     Button2: TButton;
+    Label3: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private

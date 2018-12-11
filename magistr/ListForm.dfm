@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 0
   Caption = 'ListForm'
   ClientHeight = 434
-  ClientWidth = 785
+  ClientWidth = 756
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -29,21 +29,13 @@ object Form2: TForm2
     TabOrder = 0
     OnClick = EditPolisClick
   end
-  object DBNavigator1: TDBNavigator
-    Left = 8
-    Top = 366
-    Width = 240
-    Height = 25
-    DataSource = DataM.sMain
-    TabOrder = 1
-  end
   object DBGrid1: TDBGrid
     Left = 8
     Top = 8
     Width = 577
     Height = 352
     DataSource = DataM.sMain
-    TabOrder = 2
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -100,7 +92,7 @@ object Form2: TForm2
     Height = 21
     Style = csDropDownList
     ItemIndex = 0
-    TabOrder = 3
+    TabOrder = 2
     Text = #1053#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
     Items.Strings = (
       #1053#1086#1084#1077#1088' '#1087#1086#1083#1080#1089#1072
@@ -111,7 +103,7 @@ object Form2: TForm2
     Top = 51
     Width = 145
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object Button1: TButton
     Left = 591
@@ -119,7 +111,7 @@ object Form2: TForm2
     Width = 145
     Height = 25
     Caption = #1053#1072#1081#1090#1080
-    TabOrder = 5
+    TabOrder = 4
     OnClick = Button1Click
   end
   object Button2: TButton
@@ -128,7 +120,7 @@ object Form2: TForm2
     Width = 121
     Height = 34
     Caption = #1057#1090#1088#1072#1093#1086#1074#1086#1077' '#1089#1086#1073#1099#1090#1080#1077
-    TabOrder = 6
+    TabOrder = 5
     OnClick = Button2Click
   end
   object Button3: TButton
@@ -137,7 +129,16 @@ object Form2: TForm2
     Width = 121
     Height = 34
     Caption = #1048#1084#1087#1086#1088#1090
-    TabOrder = 7
+    TabOrder = 6
     OnClick = Button3Click
+  end
+  object Button4: TButton
+    Left = 8
+    Top = 366
+    Width = 121
+    Height = 34
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 7
+    OnClick = Button4Click
   end
 end

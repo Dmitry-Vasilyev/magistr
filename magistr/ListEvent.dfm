@@ -64,21 +64,13 @@ object Form10: TForm10
         Visible = True
       end>
   end
-  object DBNavigator1: TDBNavigator
-    Left = 8
-    Top = 351
-    Width = 240
-    Height = 25
-    DataSource = DataM.Sevent
-    TabOrder = 1
-  end
   object Button1: TButton
     Left = 288
     Top = 351
     Width = 113
     Height = 34
     Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
-    TabOrder = 2
+    TabOrder = 1
     OnClick = Button1Click
   end
   object Edit1: TEdit
@@ -86,7 +78,7 @@ object Form10: TForm10
     Top = 27
     Width = 145
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object Button2: TButton
     Left = 449
@@ -94,7 +86,16 @@ object Form10: TForm10
     Width = 145
     Height = 25
     Caption = #1053#1072#1081#1090#1080
-    TabOrder = 4
+    TabOrder = 3
     OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 8
+    Top = 351
+    Width = 113
+    Height = 34
+    Caption = #1059#1076#1072#1083#1080#1090#1100
+    TabOrder = 4
+    OnClick = Button3Click
   end
 end

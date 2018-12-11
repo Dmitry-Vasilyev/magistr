@@ -117,7 +117,6 @@ type
     tMainvipisan: TStringField;
     tMainstart: TStringField;
     tMainend: TStringField;
-    tMainprice: TFloatField;
     tMainfirstname: TStringField;
     tMainlastname: TStringField;
     tMainfathername: TStringField;
@@ -139,7 +138,6 @@ type
     tMaind_name: TStringField;
     tMaind_seria: TStringField;
     tMaind_who_make: TStringField;
-    tMaind_date: TIntegerField;
     tMains_stiker: TStringField;
     tMaink_autoage_id_autoage: TIntegerField;
     tMaink_progr_idk_progr: TIntegerField;
@@ -163,6 +161,17 @@ type
     tMains_str_sum_ids_str_sum: TIntegerField;
     tMains_pilgi_idpligi: TIntegerField;
     tMains_price: TStringField;
+    tMaind_date: TStringField;
+    Tpolis_typetype: TStringField;
+    tMainprice: TFloatField;
+    Teventidevent: TAutoIncField;
+    Teventdate: TStringField;
+    Teventsum: TFloatField;
+    Teventcity: TStringField;
+    Teventviplata: TFloatField;
+    Teventpolis_num: TIntegerField;
+    Teventindex: TStringField;
+    Teventstreet: TStringField;
   private
     { Private declarations }
   public
