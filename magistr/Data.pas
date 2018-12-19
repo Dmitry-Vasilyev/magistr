@@ -172,6 +172,7 @@ type
     Teventpolis_num: TIntegerField;
     Teventindex: TStringField;
     Teventstreet: TStringField;
+    ADOQuery1: TADOQuery;
   private
     { Private declarations }
   public

@@ -1,0 +1,66 @@
+unit Analis;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm13 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form13: TForm13;
+  n, t, m, eP, eQ, eSn : Double;
+
+implementation
+
+{$R *.dfm}
+uses
+Data;
+
+procedure TForm13.Button1Click(Sender: TObject);
+begin
+Label2.Caption:= Data.DataM.tMain.RecordCount.ToString;
+n:= Data.DataM.tMain.RecordCount.ToDouble;
+
+Label4.Caption:= Data.DataM.Tevent.RecordCount.ToString;
+t:= Data.DataM.Tevent.RecordCount.ToDouble;
+
+Label6.Caption:= Data.DataM.Tevent.RecordCount.ToString;
+m:= Data.DataM.Tevent.RecordCount.ToDouble;
+
+Data.DataM.ADOQuery1.Close;
+Data.DataM.ADOQuery1.SQL.Clear;
+Data.DataM.ADOQuery1.SQL.Add('select sum(price) from polis;');
+Data.DataM.ADOQuery1.Open;
+
+eP:= Data.DataM.ADOQuery1.Fields[0].AsFloat;
+Label8.Caption:=formatfloat('0.##', eP);
+
+end;
+
+end.

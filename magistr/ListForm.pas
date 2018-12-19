@@ -75,9 +75,11 @@ procedure TForm2.EditPolisClick(Sender: TObject);
 begin
 
 Label1.Caption := Data.DataM.tMain.FieldByName('polis_type_type').AsString;
-
+Data.DataM.tMain.Refresh;
+Data.DataM.Tevent.Refresh;
 
 Data.DataM.tMain.Edit;
+
 
 polisType := Data.DataM.tMain.FieldByName('polis_type_type').AsString;
 

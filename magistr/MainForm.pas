@@ -17,11 +17,14 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Button5: TButton;
+    Label6: TLabel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormPaint(Sender: TObject);
     procedure Button4Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,7 +39,7 @@ implementation
 {$R *.dfm}
 
 uses
-Data, ListForm, PrefK, MenuPolis, ListEvent;
+Data, ListForm, PrefK, MenuPolis, ListEvent, Analis;
 
 procedure TForm1.FormPaint(Sender: TObject);
 begin
@@ -75,6 +78,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
 Form2.ShowModal();
 Data.DataM.tMain.Refresh;
+Data.DataM.Tevent.Refresh;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -86,12 +90,19 @@ procedure TForm1.Button3Click(Sender: TObject);
 begin
 MenuPolis.Form5.ShowModal();
 Data.DataM.tMain.Refresh;
+Data.DataM.Tevent.Refresh;
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
 begin
 ListEvent.Form10.ShowModal();
+Data.DataM.tMain.Refresh;
 Data.DataM.Tevent.Refresh;
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+Analis.Form13.ShowModal();
 end;
 
 end.

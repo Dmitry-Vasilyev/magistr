@@ -807,4 +807,10 @@ object DataM: TDataM
     Left = 96
     Top = 384
   end
+  object ADOQuery1: TADOQuery
+    Connection = ADOConnection1
+    Parameters = <>
+    Left = 392
+    Top = 224
+  end
 end

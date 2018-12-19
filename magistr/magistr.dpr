@@ -15,7 +15,8 @@ uses
   EventEdit in 'EventEdit.pas' {Form9},
   ListEvent in 'ListEvent.pas' {Form10},
   FastReport in 'FastReport.pas' {Form11},
-  Import in 'Import.pas' {Form12};
+  Import in 'Import.pas' {Form12},
+  Analis in 'Analis.pas' {Form13};
 
 {$R *.res}
 
@@ -36,5 +37,6 @@ begin
   Application.CreateForm(TForm10, Form10);
   Application.CreateForm(TForm11, Form11);
   Application.CreateForm(TForm12, Form12);
+  Application.CreateForm(TForm13, Form13);
   Application.Run;
 end.

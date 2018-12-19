@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 57
   Top = 0
   Caption = #1057#1050
-  ClientHeight = 511
+  ClientHeight = 630
   ClientWidth = 570
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -62,6 +62,15 @@ object Form1: TForm1
     Caption = #1057#1090#1088#1072#1093#1086#1074#1099#1077' '#1089#1086#1073#1099#1090#1080#1103', '#1091#1095#1077#1090' '#1080' '#1088#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077
     WordWrap = True
   end
+  object Label6: TLabel
+    Left = 32
+    Top = 488
+    Width = 153
+    Height = 33
+    AutoSize = False
+    Caption = #1040#1085#1072#1083#1080#1079' '#1089#1090#1088#1072#1093#1086#1074#1086#1081' '#1076#1077#1103#1090#1077#1083#1100#1085#1086#1089#1090#1080
+    WordWrap = True
+  end
   object Button1: TButton
     Left = 32
     Top = 88
@@ -98,5 +107,14 @@ object Form1: TForm1
     Caption = #1057#1090#1088#1072#1093#1086#1074#1099#1077' '#1089#1086#1073#1099#1090#1080#1103
     TabOrder = 3
     OnClick = Button4Click
+  end
+  object Button5: TButton
+    Left = 32
+    Top = 527
+    Width = 121
+    Height = 51
+    Caption = #1040#1085#1072#1083#1080#1079
+    TabOrder = 4
+    OnClick = Button5Click
   end
 end
